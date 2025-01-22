@@ -1,12 +1,10 @@
-import { useEffect } from 'react';
 import { Card } from '../components';
 import { useFetch } from '../hooks/useFetch';
 import { useTitle } from '../hooks/useTitle';
 
 export const MovieList = ({ apiPath, title }) => {
     const { data: movies } = useFetch(apiPath);
-
-    const pageTitle = useTitle(`${title}`);
+    useTitle(`${title}`);
 
     return (
         <main>
